@@ -1,0 +1,28 @@
+/* The following block can be included in a custom.scss */
+// Your variable overrides
+$body-bg: rgb(206, 16, 16);
+$body-color: rgb(34, 180, 4);
+
+$theme-colors: (
+  "primary": #414c57,
+  "danger": #ff36ff,
+  "info": rgb(67, 85, 161),
+  "custom-color": #900
+);
+
+@function color($key: "blue") {
+    @return map-get($colors, $key);
+  }
+  
+  @function theme-color($key: "primary") {
+    @return map-get($theme-colors, $key);
+  }
+  
+  @function gray($key: "100") {
+    @return map-get($grays, $key);
+  }
+
+//   Please use these methods for generic custom components from reference https://getbootstrap.com/docs/4.4/getting-started/theming/
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
